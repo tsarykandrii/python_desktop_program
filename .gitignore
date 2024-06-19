@@ -1,0 +1,5 @@
+Logs/*
+output/*
+Settings/*.key
+/Settings/.env
+/app_mode_title.log

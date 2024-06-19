@@ -1,0 +1,63 @@
+Apr 5, 2024
+Added new backup method alert_checker_backup in class Check with new api-key. Added file "version_info.rc" with information about program, version, original name converted exe file. Updated manual about work with program.
+
+Apr 4, 2024
+Added a fallback method that checks for notifications from a specific API, logs the region and status of the notifications, and executes commands based on the status of the alert.
+
+Mar 31, 2024
+Added few response code 404, 500 to request from site and added exception "requests.ConnectionError" when access to Internet to be don't work. Also removed the redundant check for the existence of a key file.
+
+Added a condition check whether the data is the same or different, if different, then write the changes to the json file. Added 2 notifications of a change in the status of an auto-run check with a log entry. Made some corrections in the text of the messages. Added a folder with tools for working in Windows 7 OS, also a "Backups" folder with a backup copy of the ModeTitleButton program was added to this folder.
+
+Mar 30, 2024
+Fixed a next problem about thread, after stop checking and again start checking old thread don't work and added program code which creating new thread and turn on new counter of thread. Added new notifications about request errors, and added request timeout 5 second and exception - requests.exceptions.timeout. Cleared some modules from old and don't used code. Corrected one comment in class StartStopChecking.
+
+Mar 27, 2024
+Fixed a problem with the counter for the message "Checking (check number)". Sorting out variables in classes and in the AirAlertChecker module idiom. Blocking the function of changing the size of the program window.
+
+Mar 26, 2024
+Added more comments for classes.
+
+Mar 25, 2024
+Added comments for all classes and methods and added counter for notification "Іде перевірка ({number of checking})" in modules Checking and StartStopCheck.
+
+Feb 23, 2024
+Fixed a bug that when the check is in progress and you press the "Stop" button and then the "Start" button again, the message that "The check has already started.
+
+Feb 22, 2024
+Added hotkeys F1 for button start, F2 for button Stop and Esc for closing program. Also added is a folder with instructions for operating and setting up the program.
+
+Feb 21, 2024
+Added a condition for checking the entered information in the cells and saving it in the file, if the information in the cells is exactly the same as in the file, then do not write it to the file, and if the data is different, then write new data to the file.
+
+A new method has been added to the AirAlertChecher module, which when closing the program asks whether to close the program, if so, then the global change is checked to see if it is True, if so, then the program exclusion method from the CheckingCondition module is included and the program closes normally without an error, if False, then the program simply closes. Also added library api-ms-win-core-path-l1-1-0.dll to run the program normally without errors in Windows 7 x64 OS.
+
+Feb 19, 2024
+Changed localization menu and log message of program on Ukrainian language. Changed mode logging on "Info".
+
+Feb 18, 2024
+In module InputOutputData.py added method resource_path for additional files will have absolute paths after converting program to exe. Added cryptography module for encrypting and decrypting api key. Added row log-error for method load_status_checkbutton in module AirAlertChecker.py.
+
+Jan 17, 2024
+Changed format paths of files for best converting program to exe. Added few print text in methods for monitoring algorithm transition from method to method.
+
+Nov 7, 2023
+Fixed bug, when auto start check in progress and user want stopped process button stop and program sent warning - check is not progress.
+
+Nov 4, 2023
+Refactoring code, added function autostart of check when starting program and fixed small bugs.
+
+Oct 25, 2023
+Created new directory's and moved some files. In processing writing code - adding new condition about opening user setting when program starting.
+
+Fixed 2 bugs. 1) When one cell is empty and runing the start, get a warning, fill the cell and press start and it will issue a message that the check has started and therefore you had to press stop and then start to start the check. 2) If there is no configuration file or it is damaged and you run the program, then the user will receive an error and tkinter will launch a second empty window. Optimization - removal of unnecessary import of the tkinter module and its call.
+
+Oct 22, 2023
+Added new function print log event in GUI in program. Added 2 events for log about StartStopCheck module about start and stop checking.
+
+Oct 16, 2023
+Changed the name of variables in all modules so that the name is as logical as possible for the module class. Changed the name of the "condition check" module.
+
+Oct 14, 2023
+Add new method window_icon which added icon image on window of program.
+
